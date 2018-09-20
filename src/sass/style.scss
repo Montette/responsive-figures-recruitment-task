@@ -90,5 +90,23 @@ html {
             }
         }
     }
-   
+
+
+    & .redSquares {
+        transform: rotate(-45deg);
+        @include flex(space-between,center);
+        &__square {
+            width: 8rem;
+            height: 8rem;
+            background-color: red;
+            @include border;
+            &:first-child{
+                margin-right: 3.8rem;
+                margin-right: 3.2rem;
+            }
+        }
+    }
+
+
+    
 }
