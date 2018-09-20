@@ -451,6 +451,11 @@ html {
       padding: 20px 0;
       opacity: 0;
       animation: circleAnim 2s 5s ease forwards; }
+  .figures__text {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 20px;
+    font-family: sans-serif; }
 
 @keyframes redSquareAnim {
   0% {

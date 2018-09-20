@@ -176,6 +176,12 @@ html {
             opacity: 0;
             animation: circleAnim 2s 5s ease forwards;
         }
+    }
+    &__text {
+        font-size:2rem;
+        text-align: center;
+        padding-top: 20px;
+        font-family: sans-serif;
     }   
 }
 
