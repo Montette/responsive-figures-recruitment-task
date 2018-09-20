@@ -315,10 +315,10 @@ html {
       font-size: calc(12px + .2vw); } }
   @media screen and (min-width: 1200px) {
     html {
-      font-size: calc(13px + .4vw); } }
+      font-size: calc(13px + .2vw); } }
   @media screen and (min-width: 1400px) {
     html {
-      font-size: calc(14px + .5vw); } }
+      font-size: calc(14px + .4vw); } }
 
 .figures {
   display: flex;
