@@ -1,0 +1,44 @@
+$sizes: ( default: calc(9px + .5vw), 345px: calc(11px + .7vw), 583px: calc(11px + .5vw), 900px: calc(12px + .2vw), 1200px: calc(13px + .2vw), 1400px: calc(14px + .4vw));
+$colors: #073763,
+#1060a7,
+#3d85c6,
+#669ed3,
+#9fc5e8,
+#554083,
+#8f7ac4,
+#7860c0,
+#674ea7,
+#2c1663,
+#5a2e44,
+#bd5a8b,
+#cc82a8,
+#b995a7,
+#d8aca4;
+@mixin gradientBackground ($color1, $color2) {
+    background: linear-gradient(270deg, $colors, $color1, $color2);
+    background-size: 2000% 2000%;
+}
+
+@mixin elements-size($sizes-object) {
+    @each $breakpoint,
+    $size in $sizes-object {
+        @if $breakpoint=='default' {
+            font-size: $size;
+        }
+        @else {
+            @media screen and (min-width: $breakpoint) {
+                font-size: $size;
+            }
+        }
+    }
+}
+
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin border {
+    border: 3px solid black;
+}
