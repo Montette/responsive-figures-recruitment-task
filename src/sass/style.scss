@@ -15,6 +15,14 @@ $sizes: (
   1400px: calc(14px + .4vw)
 );
 
+
+$colors: #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4;
+
+@mixin gradientBackground ($color1, $color2){
+    background: linear-gradient(270deg, $colors, $color1, $color2);
+    background-size: 2000% 2000%;
+}
+
 @mixin elements-size($sizes-object) {
     @each $breakpoint, $size in $sizes-object {
       @if $breakpoint == 'default' {
@@ -93,10 +101,16 @@ html {
     &__bigRectangle {
         width: 13rem;
         height: 28rem;
-        background-color: darken(red,20%);
         @include border;
         opacity: 0;
-        animation: bigRectangleAnim 3s 4s ease forwards;
+        animation: bigRectangleAnim 3s 4s ease forwards, colors 8s ease forwards;
+        @include gradientBackground(blue, blue);
+        @media only screen and(min-width: 583px){
+            @include gradientBackground(darken(red,20%), darken(red,20%));
+        }
+        @media only screen and(min-width: 900px){
+            @include gradientBackground(#fff, #fff);
+        }     
     }
 
     & .redSquares {
@@ -105,14 +119,14 @@ html {
         &__square {
             width: 8rem;
             height: 8rem;
-            background-color: red;
             @include border;
-            animation: redSquareAnim 1s 2s ease forwards;
+            animation: redSquareAnim 1s 2s ease forwards, colors 4s ease forwards;
+            @include gradientBackground(red, red);
             opacity: 0;
             &:first-child{
                 margin-right: 3.8rem;
                 margin-right: 3.2rem;
-                animation-delay: 3s;
+                animation-delay: 3s,1s;
             }
         }
     }
@@ -142,31 +156,27 @@ html {
             width: 8rem;
             height:12px;
             height: 1.2rem;
-            background-color: blue;
             @include border;
             opacity: 0;
-            animation: smallRectangleleAnim 1s 3.5s ease forwards;
+            animation: smallRectangleleAnim 1s 3.5s ease forwards, colors 6s ease forwards;
+            @include gradientBackground(blue, blue);
             &:nth-child(2){
-                animation-delay: 4s;
+                animation-delay:  4s,1s;
             }
         }
         &__circle{
             width: 7rem;
             height: 6.4rem;
             border-radius: 50%;
-            background-color: rgb(11, 120, 153);
+            background-color: #0B7899;
             @include border;
             @include flex(space-between,center);
             flex-direction: column;
             padding: 20px 0;
             opacity: 0;
             animation: circleAnim 2s 5s ease forwards;
-
-         
-        
         }
-    }
-    
+    }   
 }
 
 
@@ -234,13 +244,13 @@ html {
       @keyframes bigRectangleAnim {
         0% { transform: translateY(100vh); }
         10% {
-            opacity: .2;
+            opacity: .1;
           }
         20% {
-          opacity: .3;
+          opacity: .1;
         }
         30% {
-            opacity: .4;
+            opacity: .3;
           }
           40% {
             opacity: .5;
@@ -256,3 +266,9 @@ html {
           transform: translateY(0);
         }
       }
+
+      @keyframes colors { 
+        0% { background-position: 0% 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0% 50% }
+    }

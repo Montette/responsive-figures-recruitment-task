@@ -375,10 +375,19 @@ html {
   .figures__bigRectangle {
     width: 13rem;
     height: 28rem;
-    background-color: #990000;
     border: 3px solid black;
     opacity: 0;
-    animation: bigRectangleAnim 3s 4s ease forwards; }
+    animation: bigRectangleAnim 3s 4s ease forwards, colors 8s ease forwards;
+    background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, blue, blue);
+    background-size: 2000% 2000%; }
+    @media only screen and (min-width: 583px) {
+      .figures__bigRectangle {
+        background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, #990000, #990000);
+        background-size: 2000% 2000%; } }
+    @media only screen and (min-width: 900px) {
+      .figures__bigRectangle {
+        background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, #fff, #fff);
+        background-size: 2000% 2000%; } }
   .figures .redSquares {
     transform: rotate(-45deg);
     display: flex;
@@ -387,14 +396,15 @@ html {
     .figures .redSquares__square {
       width: 8rem;
       height: 8rem;
-      background-color: red;
       border: 3px solid black;
-      animation: redSquareAnim 1s 2s ease forwards;
+      animation: redSquareAnim 1s 2s ease forwards, colors 4s ease forwards;
+      background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, red, red);
+      background-size: 2000% 2000%;
       opacity: 0; }
       .figures .redSquares__square:first-child {
         margin-right: 3.8rem;
         margin-right: 3.2rem;
-        animation-delay: 3s; }
+        animation-delay: 3s,1s; }
   .figures .blueFigures {
     display: flex;
     justify-content: initial;
@@ -421,17 +431,18 @@ html {
       width: 8rem;
       height: 12px;
       height: 1.2rem;
-      background-color: blue;
       border: 3px solid black;
       opacity: 0;
-      animation: smallRectangleleAnim 1s 3.5s ease forwards; }
+      animation: smallRectangleleAnim 1s 3.5s ease forwards, colors 6s ease forwards;
+      background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, blue, blue);
+      background-size: 2000% 2000%; }
       .figures .blueFigures__rectangle:nth-child(2) {
-        animation-delay: 4s; }
+        animation-delay: 4s,1s; }
     .figures .blueFigures__circle {
       width: 7rem;
       height: 6.4rem;
       border-radius: 50%;
-      background-color: #0b7899;
+      background-color: #0B7899;
       border: 3px solid black;
       display: flex;
       justify-content: space-between;
@@ -492,11 +503,11 @@ html {
   0% {
     transform: translateY(100vh); }
   10% {
-    opacity: .2; }
+    opacity: .1; }
   20% {
-    opacity: .3; }
+    opacity: .1; }
   30% {
-    opacity: .4; }
+    opacity: .3; }
   40% {
     opacity: .5; }
   50% {
@@ -506,3 +517,11 @@ html {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
