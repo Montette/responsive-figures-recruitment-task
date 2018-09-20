@@ -90,7 +90,13 @@ html {
             }
         }
     }
-  
+    &__bigRectangle {
+        width: 13rem;
+        height: 28rem;
+        background-color: darken(red,20%);
+        @include border;
+    }
+
     & .redSquares {
         transform: rotate(-45deg);
         @include flex(space-between,center);
