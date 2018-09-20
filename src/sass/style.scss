@@ -36,3 +36,28 @@ $sizes: (
 @mixin border {
     border: 3px solid black;
 }
+
+html {
+    @include elements-size($sizes);
+  }
+
+  .figures {
+    @include flex(initial,initial);
+    flex-wrap: wrap;
+    background-color: darken(green,10%);
+    min-height: 100vh;  
+    @media only screen and(min-width: 583px){
+        padding-bottom: 20px;
+    }
+    &__topElement {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        height: 5rem;
+        background-color: rgb(55, 114, 0);
+        @include border;
+    }
+    
+}
