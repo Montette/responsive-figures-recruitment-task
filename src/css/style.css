@@ -527,7 +527,6 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
     height: 5rem;
     background-color: #377200;
     border: 3px solid black; }
@@ -638,7 +637,6 @@ html {
       background-size: 2000% 2000%;
       opacity: 0; }
       .figures .redSquares__square:first-child {
-        margin-right: 3.8rem;
         margin-right: 3.2rem;
         -webkit-animation-delay: 3s, 1s;
                 animation-delay: 3s, 1s; }
@@ -652,14 +650,12 @@ html {
     -webkit-box-align: initial;
         -ms-flex-align: initial;
             align-items: initial;
-    margin: 80px 0 20px 10px;
     margin: 8rem 0 2rem 1rem; }
     @media only screen and (min-width: 900px) {
       .figures .blueFigures {
         margin: 0; } }
     @media only screen and (min-width: 900px) {
       .figures .blueFigures {
-        margin-right: 20px;
         margin-right: 2rem; } }
     .figures .blueFigures__rectanglesContainer {
       -webkit-box-orient: vertical;
@@ -674,13 +670,10 @@ html {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding: 1px 0;
-      margin-right: 17px;
       padding: .1rem 0;
       margin-right: 1.7rem; }
     .figures .blueFigures__rectangle {
       width: 8rem;
-      height: 12px;
       height: 1.2rem;
       border: 3px solid black;
       opacity: 0;
