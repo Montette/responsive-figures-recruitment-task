@@ -95,6 +95,8 @@ html {
         height: 28rem;
         background-color: darken(red,20%);
         @include border;
+        opacity: 0;
+        animation: bigRectangleAnim 3s 4s ease forwards;
     }
 
     & .redSquares {
@@ -158,7 +160,7 @@ html {
             flex-direction: column;
             padding: 20px 0;
             opacity: 0;
-            animation: circleAnim 3s 5s ease forwards;
+            animation: circleAnim 2s 5s ease forwards;
 
          
         
@@ -227,4 +229,30 @@ html {
             opacity: 1;
          }
       }
-    
+
+       
+      @keyframes bigRectangleAnim {
+        0% { transform: translateY(100vh); }
+        10% {
+            opacity: .2;
+          }
+        20% {
+          opacity: .3;
+        }
+        30% {
+            opacity: .4;
+          }
+          40% {
+            opacity: .5;
+          }
+          50% {
+            opacity: .6;
+          }
+        60% {
+            opacity: .8;
+          }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
