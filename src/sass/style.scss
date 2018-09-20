@@ -11,8 +11,8 @@ $sizes: (
   345px : calc(11px + .7vw),
   583px : calc(11px + .5vw),
   900px : calc(12px + .2vw),
-  1200px: calc(13px + .4vw),
-  1400px: calc(14px + .5vw)
+  1200px: calc(13px + .2vw),
+  1400px: calc(14px + .4vw)
 );
 
 @mixin elements-size($sizes-object) {
