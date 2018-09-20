@@ -143,12 +143,12 @@ html {
             background-color: blue;
             @include border;
             opacity: 0;
-            animation: smallRectangleleAnim 2s 4s ease forwards;
+            animation: smallRectangleleAnim 1s 3.5s ease forwards;
             &:nth-child(2){
-                animation-delay: 5s;
+                animation-delay: 4s;
             }
         }
-        & .circle{
+        &__circle{
             width: 7rem;
             height: 6.4rem;
             border-radius: 50%;
@@ -157,6 +157,8 @@ html {
             @include flex(space-between,center);
             flex-direction: column;
             padding: 20px 0;
+            opacity: 0;
+            animation: circleAnim 3s 5s ease forwards;
 
          
         
@@ -208,4 +210,21 @@ html {
       }
       
 
+      @keyframes circleAnim {
+        0% {
+          opacity: 0;
+          transform: scale(.3);
+        }
+        30% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+        70% { 
+            transform: scale(.7);
+         }
+        100% { 
+            transform: scale(1);
+            opacity: 1;
+         }
+      }
     
