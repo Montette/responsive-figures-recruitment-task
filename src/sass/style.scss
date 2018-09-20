@@ -90,8 +90,7 @@ html {
             }
         }
     }
-
-
+  
     & .redSquares {
         transform: rotate(-45deg);
         @include flex(space-between,center);
@@ -107,6 +106,41 @@ html {
         }
     }
 
+    & .blueFigures {
+       
+        @include flex(initial, initial);
+        margin: 80px 0 20px 10px;
+        margin: 8rem 0 2rem 1rem;
+        @media only screen and(min-width: 900px){
+            margin: 0;
+        }
+        @media only screen and(min-width: 900px){
+            margin-right:20px;
+            margin-right:2rem;
+        }
+        &__rectanglesContainer{
+            flex-direction: column;
+            @include flex(space-around, center);
+            padding: 1px 0;
+            margin-right: 17px;
+            padding: .1rem 0;
+            margin-right: 1.7rem;
+        }
 
+        &__rectangle {
+            width: 8rem;
+            height:12px;
+            height: 1.2rem;
+            background-color: blue;
+            @include border;
+        }
+        &__circle{
+            width: 7rem;
+            height: 6.4rem;
+            border-radius: 50%;
+            background-color: rgb(11, 120, 153);
+            @include border;
+        }
+    }
     
 }
