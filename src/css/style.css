@@ -34,7 +34,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -68,7 +69,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -200,7 +202,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -231,7 +234,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -297,56 +301,132 @@ template {
 [hidden] {
   display: none; }
 
-@keyframes redSquareAnim {
+@-webkit-keyframes redSquareAnim {
   0% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 0; }
   30% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     opacity: 0; }
   40%, 60% {
-    transform: rotate(-20deg) scale(1.3);
+    -webkit-transform: rotate(-20deg) scale(1.3);
+            transform: rotate(-20deg) scale(1.3);
     opacity: 1; }
   50% {
-    transform: rotate(20deg) scale(1.3);
+    -webkit-transform: rotate(20deg) scale(1.3);
+            transform: rotate(20deg) scale(1.3);
     opacity: 1; }
   70% {
-    transform: rotate(0deg) scale(1.3);
+    -webkit-transform: rotate(0deg) scale(1.3);
+            transform: rotate(0deg) scale(1.3);
     opacity: 1; }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@keyframes redSquareAnim {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; }
+  30% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0; }
+  40%, 60% {
+    -webkit-transform: rotate(-20deg) scale(1.3);
+            transform: rotate(-20deg) scale(1.3);
+    opacity: 1; }
+  50% {
+    -webkit-transform: rotate(20deg) scale(1.3);
+            transform: rotate(20deg) scale(1.3);
+    opacity: 1; }
+  70% {
+    -webkit-transform: rotate(0deg) scale(1.3);
+            transform: rotate(0deg) scale(1.3);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@-webkit-keyframes smallRectangleleAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px); }
+  80% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1; } }
 
 @keyframes smallRectangleleAnim {
   0% {
     opacity: 0;
-    transform: translateX(2000px); }
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px); }
   60% {
     opacity: 1;
-    transform: translateX(-30px); }
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px); }
   80% {
-    transform: translateX(30px);
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
     opacity: 1; }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@-webkit-keyframes circleAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3); }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  70% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1; } }
 
 @keyframes circleAnim {
   0% {
     opacity: 0;
-    transform: scale(0.3); }
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3); }
   30% {
     opacity: 1;
-    transform: scale(1.2); }
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
   70% {
-    transform: scale(0.7); }
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1; } }
 
-@keyframes bigRectangleAnim {
+@-webkit-keyframes bigRectangleAnim {
   0% {
-    transform: translateY(100vh); }
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh); }
   10% {
     opacity: .1; }
   20% {
@@ -361,7 +441,37 @@ template {
     opacity: .8; }
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes bigRectangleAnim {
+  0% {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh); }
+  10% {
+    opacity: .1; }
+  20% {
+    opacity: .1; }
+  30% {
+    opacity: .3; }
+  40% {
+    opacity: .5; }
+  50% {
+    opacity: .6; }
+  60% {
+    opacity: .8; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes colors {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 
 @keyframes colors {
   0% {
@@ -374,7 +484,8 @@ template {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 html {
   font-size: calc(9px + .5vw); }
@@ -395,10 +506,17 @@ html {
       font-size: calc(14px + .4vw); } }
 
 .figures {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: initial;
-  align-items: initial;
-  flex-wrap: wrap;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #004d00;
   min-height: 100vh; }
   @media only screen and (min-width: 583px) {
@@ -414,16 +532,32 @@ html {
     background-color: #377200;
     border: 3px solid black; }
   .figures__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: initial;
-    align-items: initial;
-    flex-wrap: wrap; }
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .figures__column--left {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       width: 100vw;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       padding-top: 5.5rem;
       margin-top: 5rem; }
       @media only screen and (min-width: 583px) {
@@ -431,18 +565,33 @@ html {
           width: 65%; } }
       @media only screen and (min-width: 900px) {
         .figures__column--left {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          flex-direction: row; } }
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; } }
     .figures__column--right {
       width: 100vw;
       padding: 0 0 1rem 4rem; }
       @media only screen and (min-width: 583px) {
         .figures__column--right {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: flex-end;
-          align-items: initial;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+          -webkit-box-align: initial;
+              -ms-flex-align: initial;
+                  align-items: initial;
           width: 35%;
           padding: 2.5rem 2rem 0 0;
           margin-top: 5rem; } }
@@ -451,38 +600,58 @@ html {
     height: 28rem;
     border: 3px solid black;
     opacity: 0;
-    animation: bigRectangleAnim 3s 4s ease forwards, colors 8s ease forwards;
+    -webkit-animation: bigRectangleAnim 3s 4s ease forwards, colors 8s ease forwards;
+            animation: bigRectangleAnim 3s 4s ease forwards, colors 8s ease forwards;
+    background: -webkit-gradient(linear, right top, left top, from(#073763), color-stop(#1060a7), color-stop(#3d85c6), color-stop(#669ed3), color-stop(#9fc5e8), color-stop(#554083), color-stop(#8f7ac4), color-stop(#7860c0), color-stop(#674ea7), color-stop(#2c1663), color-stop(#5a2e44), color-stop(#bd5a8b), color-stop(#cc82a8), color-stop(#b995a7), color-stop(#d8aca4), color-stop(blue), to(blue));
     background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, blue, blue);
     background-size: 2000% 2000%; }
     @media only screen and (min-width: 583px) {
       .figures__bigRectangle {
+        background: -webkit-gradient(linear, right top, left top, from(#073763), color-stop(#1060a7), color-stop(#3d85c6), color-stop(#669ed3), color-stop(#9fc5e8), color-stop(#554083), color-stop(#8f7ac4), color-stop(#7860c0), color-stop(#674ea7), color-stop(#2c1663), color-stop(#5a2e44), color-stop(#bd5a8b), color-stop(#cc82a8), color-stop(#b995a7), color-stop(#d8aca4), color-stop(#990000), to(#990000));
         background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, #990000, #990000);
         background-size: 2000% 2000%; } }
     @media only screen and (min-width: 900px) {
       .figures__bigRectangle {
+        background: -webkit-gradient(linear, right top, left top, from(#073763), color-stop(#1060a7), color-stop(#3d85c6), color-stop(#669ed3), color-stop(#9fc5e8), color-stop(#554083), color-stop(#8f7ac4), color-stop(#7860c0), color-stop(#674ea7), color-stop(#2c1663), color-stop(#5a2e44), color-stop(#bd5a8b), color-stop(#cc82a8), color-stop(#b995a7), color-stop(#d8aca4), color-stop(#fff), to(#fff));
         background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, #fff, #fff);
         background-size: 2000% 2000%; } }
   .figures .redSquares {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .figures .redSquares__square {
       width: 8rem;
       height: 8rem;
       border: 3px solid black;
-      animation: redSquareAnim 1s 2s ease forwards, colors 4s ease forwards;
+      -webkit-animation: redSquareAnim 1s 2s ease forwards, colors 4s ease forwards;
+              animation: redSquareAnim 1s 2s ease forwards, colors 4s ease forwards;
+      background: -webkit-gradient(linear, right top, left top, from(#073763), color-stop(#1060a7), color-stop(#3d85c6), color-stop(#669ed3), color-stop(#9fc5e8), color-stop(#554083), color-stop(#8f7ac4), color-stop(#7860c0), color-stop(#674ea7), color-stop(#2c1663), color-stop(#5a2e44), color-stop(#bd5a8b), color-stop(#cc82a8), color-stop(#b995a7), color-stop(#d8aca4), color-stop(red), to(red));
       background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, red, red);
       background-size: 2000% 2000%;
       opacity: 0; }
       .figures .redSquares__square:first-child {
         margin-right: 3.8rem;
         margin-right: 3.2rem;
-        animation-delay: 3s, 1s; }
+        -webkit-animation-delay: 3s, 1s;
+                animation-delay: 3s, 1s; }
   .figures .blueFigures {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: initial;
-    align-items: initial;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
     margin: 80px 0 20px 10px;
     margin: 8rem 0 2rem 1rem; }
     @media only screen and (min-width: 900px) {
@@ -493,10 +662,18 @@ html {
         margin-right: 20px;
         margin-right: 2rem; } }
     .figures .blueFigures__rectanglesContainer {
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       padding: 1px 0;
       margin-right: 17px;
       padding: .1rem 0;
@@ -507,24 +684,37 @@ html {
       height: 1.2rem;
       border: 3px solid black;
       opacity: 0;
-      animation: smallRectangleleAnim 1s 3.5s ease forwards, colors 6s ease forwards;
+      -webkit-animation: smallRectangleleAnim 1s 3.5s ease forwards, colors 6s ease forwards;
+              animation: smallRectangleleAnim 1s 3.5s ease forwards, colors 6s ease forwards;
+      background: -webkit-gradient(linear, right top, left top, from(#073763), color-stop(#1060a7), color-stop(#3d85c6), color-stop(#669ed3), color-stop(#9fc5e8), color-stop(#554083), color-stop(#8f7ac4), color-stop(#7860c0), color-stop(#674ea7), color-stop(#2c1663), color-stop(#5a2e44), color-stop(#bd5a8b), color-stop(#cc82a8), color-stop(#b995a7), color-stop(#d8aca4), color-stop(blue), to(blue));
       background: linear-gradient(270deg, #073763, #1060a7, #3d85c6, #669ed3, #9fc5e8, #554083, #8f7ac4, #7860c0, #674ea7, #2c1663, #5a2e44, #bd5a8b, #cc82a8, #b995a7, #d8aca4, blue, blue);
       background-size: 2000% 2000%; }
       .figures .blueFigures__rectangle:nth-child(2) {
-        animation-delay: 4s, 1s; }
+        -webkit-animation-delay: 4s, 1s;
+                animation-delay: 4s, 1s; }
     .figures .blueFigures__circle {
       width: 7rem;
       height: 6.4rem;
       border-radius: 50%;
       background-color: #0B7899;
       border: 3px solid black;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       padding: 20px 0;
       opacity: 0;
-      animation: circleAnim 2s 5s ease forwards; }
+      -webkit-animation: circleAnim 2s 5s ease forwards;
+              animation: circleAnim 2s 5s ease forwards; }
   .figures__text {
     font-size: 2rem;
     text-align: center;
