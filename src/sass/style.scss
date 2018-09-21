@@ -19,7 +19,7 @@ html {
     background-color: darken(green, 10%);
     min-height: 100vh;
     @media only screen and(min-width: 583px) {
-        padding-bottom: 20px;
+        padding-bottom: 2rem;
     }
     &__topElement {
         position: absolute;
@@ -121,8 +121,6 @@ html {
             background-color: #0B7899;
             @include border;
             @include flex(space-between, center);
-            flex-direction: column;
-            padding: 20px 0;
             opacity: 0;
             animation: circleAnim 2s 5s ease forwards;
         }
@@ -130,7 +128,7 @@ html {
     &__text {
         font-size: 2rem;
         text-align: center;
-        padding-top: 20px;
+        padding-top: 2rem;
         font-family: sans-serif;
     }
 }

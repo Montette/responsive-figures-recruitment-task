@@ -521,7 +521,7 @@ html {
   min-height: 100vh; }
   @media only screen and (min-width: 583px) {
     .figures {
-      padding-bottom: 20px; } }
+      padding-bottom: 2rem; } }
   .figures__topElement {
     position: absolute;
     top: 0;
@@ -700,16 +700,11 @@ html {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      padding: 20px 0;
       opacity: 0;
       -webkit-animation: circleAnim 2s 5s ease forwards;
               animation: circleAnim 2s 5s ease forwards; }
   .figures__text {
     font-size: 2rem;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 2rem;
     font-family: sans-serif; }
